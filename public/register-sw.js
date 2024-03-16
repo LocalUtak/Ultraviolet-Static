@@ -29,6 +29,5 @@ async function registerSW() {
   });
 
   // Register the EpoxyClient transport to be used for network requests
-  let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
-  BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: wispUrl });
+  BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: "ws://wisp.mercurywork.shop" });
 }
